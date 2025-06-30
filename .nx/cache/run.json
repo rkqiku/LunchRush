@@ -1,0 +1,21 @@
+{
+  "run": {
+    "command": "nx run microservice:dapr",
+    "startTime": "2025-06-30T18:05:09.975Z",
+    "endTime": "2025-06-30T18:17:46.384Z",
+    "inner": false
+  },
+  "tasks": [
+    {
+      "taskId": "microservice:dapr",
+      "target": "dapr",
+      "projectName": "microservice",
+      "hash": "6527319392506042651",
+      "startTime": "2025-06-30T18:05:09.986Z",
+      "endTime": "2025-06-30T18:17:46.380Z",
+      "params": "",
+      "cacheStatus": "cache-miss",
+      "status": 1
+    }
+  ]
+}

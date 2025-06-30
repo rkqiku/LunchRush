@@ -1,0 +1,98 @@
+{
+  "version": "6.0",
+  "nxVersion": "21.2.1",
+  "pathMappings": {},
+  "nxJsonPlugins": [],
+  "fileMap": {
+    "nonProjectFiles": [
+      {
+        "file": ".gitignore",
+        "hash": "12990309872111536764"
+      },
+      {
+        "file": ".nx/nxw.js",
+        "hash": "11301648124127104610"
+      },
+      {
+        "file": "README.md",
+        "hash": "8193316019683889849"
+      },
+      {
+        "file": "components/orderbinding.yaml",
+        "hash": "3760256261065471006"
+      },
+      {
+        "file": "components/pubsub.yaml",
+        "hash": "2330046768846995899"
+      },
+      {
+        "file": "components/statestore.yaml",
+        "hash": "17319817983008575924"
+      },
+      {
+        "file": "nx",
+        "hash": "17165975525224888679"
+      },
+      {
+        "file": "nx.bat",
+        "hash": "16119536321561623970"
+      },
+      {
+        "file": "nx.json",
+        "hash": "15629001250769130935"
+      },
+      {
+        "file": "package-lock.json",
+        "hash": "14158974774938264882"
+      },
+      {
+        "file": "package.json",
+        "hash": "7020088577396201490"
+      },
+      {
+        "file": "plugin/README.md",
+        "hash": "6509079014387781526"
+      }
+    ],
+    "projectFileMap": {
+      "microservice": [
+        {
+          "file": "microservice/README.md",
+          "hash": "14872098263097574597"
+        },
+        {
+          "file": "microservice/go.mod",
+          "hash": "16586558010393530054"
+        },
+        {
+          "file": "microservice/go.sum",
+          "hash": "7027971786262192737"
+        },
+        {
+          "file": "microservice/lunchrush.exe",
+          "hash": "18022378383852347967"
+        },
+        {
+          "file": "microservice/main.go",
+          "hash": "187118117864450716"
+        },
+        {
+          "file": "microservice/main_test.go",
+          "hash": "12780176229736183515"
+        },
+        {
+          "file": "microservice/models.go",
+          "hash": "13437376506572946501"
+        },
+        {
+          "file": "microservice/project.json",
+          "hash": "14855385684581971993"
+        },
+        {
+          "file": "microservice/ws/ws.go",
+          "hash": "4332821049114272073"
+        }
+      ]
+    }
+  }
+}

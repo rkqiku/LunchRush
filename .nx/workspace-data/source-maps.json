@@ -1,0 +1,96 @@
+{
+  "microservice": {
+    "root": [
+      "microservice/project.json",
+      "nx/core/project-json"
+    ],
+    "name": [
+      "microservice/project.json",
+      "nx/core/project-json"
+    ],
+    "$schema": [
+      "microservice/project.json",
+      "nx/core/project-json"
+    ],
+    "projectType": [
+      "microservice/project.json",
+      "nx/core/project-json"
+    ],
+    "sourceRoot": [
+      "microservice/project.json",
+      "nx/core/project-json"
+    ],
+    "tags": [
+      "microservice/project.json",
+      "nx/core/project-json"
+    ],
+    "targets": [
+      "microservice/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build": [
+      "microservice/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.executor": [
+      "microservice/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options": [
+      "microservice/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.build.options.main": [
+      "microservice/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve": [
+      "microservice/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.executor": [
+      "microservice/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options": [
+      "microservice/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.serve.options.main": [
+      "microservice/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test": [
+      "microservice/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.test.executor": [
+      "microservice/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint": [
+      "microservice/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.lint.executor": [
+      "microservice/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.dapr": [
+      "microservice/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.dapr.executor": [
+      "microservice/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.dapr.options": [
+      "microservice/project.json",
+      "nx/core/project-json"
+    ],
+    "targets.dapr.options.command": [
+      "microservice/project.json",
+      "nx/core/project-json"
+    ]
+  }
+}
