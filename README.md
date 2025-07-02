@@ -1,12 +1,12 @@
-# 🍱 Huly Plugin Challenge: LunchRush
+# 🍱 Huly.io Plugin Challenge: LunchRush
 
-Welcome to the **LunchRush** challenge — your mission is to build a collaborative Huly plugin that helps employees coordinate their daily lunch orders in a fun and efficient way.
+Welcome to the **LunchRush** challenge — your mission is to build a collaborative Huly.io plugin that helps employees coordinate their daily lunch orders in a fun and efficient way.
 
 ---
 
 ## 🧠 The Idea
 
-Lunchtime coordination is always messy: scattered messages, missed orders, and last-minute chaos. **LunchRush** solves this by offering a central place — inside Huly — where team members can:
+Lunchtime coordination is always messy: scattered messages, missed orders, and last-minute chaos. **LunchRush** solves this by offering a central place — inside Huly.io — where team members can:
 
 - Propose or vote on restaurants and dishes
 - Join the group lunch order
@@ -41,7 +41,7 @@ This challenge is designed to evaluate your ability to:
 - 🧠 Model collaborative workflows
 - 👩‍💻 Write clean, idiomatic Go code
 - ⚙️ Use Dapr to manage distributed state and pub/sub
-- 🎨 Create a clear, user-friendly interface inside Huly
+- 🎨 Create a clear, user-friendly interface inside Huly.io
 
 ---
 
@@ -60,7 +60,7 @@ You're welcome (but not required) to go further:
 
 1. Fork this repo
 2. Implement your solution in:
-   - `plugin/` for the Huly plugin
+   - `plugin/` for the Huly.io plugin
    - `microservice/` for your Go+Dapr backend
 3. Include a `README.md` with:
    - Setup instructions
