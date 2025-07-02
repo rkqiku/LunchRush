@@ -13,7 +13,7 @@ A real-time collaborative lunch ordering system with restaurant voting, meal tra
 
 ```bash
 # 1. Clone repository
-git clone <repository-url>
+git clone https://github.com/hysaordis/LunchRush.git
 cd LunchRush
 
 # 2. Setup (first time only - checks Docker installation)
