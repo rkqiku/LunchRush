@@ -7,7 +7,8 @@ const SessionHeader = ({ session }) => {
   useEffect(() => {
     const updateTimer = () => {
       if (session.status === 'locked') {
-        setTimeLeft('Order Locked');
+        const lockTime = new Date(session.lockTime);
+        setTimeLeft(`Locked at ${lockTime.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })}`);
         return;
       }
 
@@ -16,16 +17,24 @@ const SessionHeader = ({ session }) => {
       const diff = lockTime - now;
 
       if (diff <= 0) {
-        setTimeLeft('Lock time passed');
+        setTimeLeft('Ready to lock');
       } else {
         const hours = Math.floor(diff / (1000 * 60 * 60));
         const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        setTimeLeft(`${hours}h ${minutes}m`);
+        
+        if (hours === 0 && minutes <= 30) {
+          // Warning when less than 30 minutes
+          setTimeLeft(`⚠️ ${minutes}m left`);
+        } else if (hours === 0) {
+          setTimeLeft(`${minutes}m until cutoff`);
+        } else {
+          setTimeLeft(`${hours}h ${minutes}m until cutoff`);
+        }
       }
     };
 
     updateTimer();
-    const interval = setInterval(updateTimer, 60000); // Update every minute
+    const interval = setInterval(updateTimer, 10000); // Update every 10 seconds for better accuracy
 
     return () => clearInterval(interval);
   }, [session]);
@@ -56,9 +65,16 @@ const SessionHeader = ({ session }) => {
           </div>
         </div>
 
-        <div className="flex items-center gap-2 text-gray-700">
-          <Clock className="w-4 h-4" />
-          <span className="font-medium text-sm">{timeLeft}</span>
+        <div className="flex flex-col items-end">
+          <div className="flex items-center gap-2 text-gray-700">
+            <Clock className="w-4 h-4" />
+            <span className="font-medium text-sm">{timeLeft}</span>
+          </div>
+          {session.status === 'open' && (
+            <div className="text-xs text-gray-500 mt-1">
+              Cutoff: {new Date(session.lockTime).toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' })}
+            </div>
+          )}
         </div>
       </div>
     </div>

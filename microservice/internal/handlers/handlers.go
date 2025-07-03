@@ -30,7 +30,7 @@ func (h *Handler) CreateSession(w http.ResponseWriter, r *http.Request) {
 	// Check if session already exists for today
 	existingSession, err := h.store.GetTodaySession(ctx)
 	if err == nil && existingSession != nil {
-		h.respondJSON(w, http.StatusConflict, map[string]string{"error": "Session already exists for today"})
+		h.respondJSON(w, http.StatusConflict, map[string]string{"error": "A lunch session already exists for today"})
 		return
 	}
 

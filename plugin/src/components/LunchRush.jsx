@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useMemo } from 'react';
 import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import { Pizza, Clock, Users, ChefHat } from 'lucide-react';
 import api from '../api/client';
@@ -27,8 +27,9 @@ const LunchRush = () => {
   // Create session mutation
   const createSessionMutation = useMutation({
     mutationFn: api.createSession,
-    onSuccess: () => {
-      queryClient.invalidateQueries(['session']);
+    onSuccess: async () => {
+      // Force immediate refetch
+      await queryClient.refetchQueries(['session', 'today']);
       showToast('Session created successfully!', 'success');
     },
     onError: (error) => {
@@ -42,9 +43,10 @@ const LunchRush = () => {
     setTimeout(() => setToast(null), 5000);
   };
 
-  // Calculate isParticipant early for hook
-  const isParticipant = user && session && 
-    session.participants?.some(p => p.username === user?.username);
+  // Calculate isParticipant with useMemo to ensure it updates when user or session changes
+  const isParticipant = useMemo(() => {
+    return user && session && session.participants?.some(p => p.username === user?.username);
+  }, [user, session]);
   
   // Use heartbeat hook - must be called before any returns
   useHeartbeat(session?.id, user?.username, isParticipant);

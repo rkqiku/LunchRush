@@ -46,7 +46,10 @@ client.interceptors.response.use(
   (response) => response,
   (error) => {
     if (error.response) {
-      console.error('API Error:', error.response.status, error.response.data);
+      // Don't log 404 errors for today's session - it's normal when no session exists
+      if (!(error.response.status === 404 && error.config.url?.includes('/sessions/today'))) {
+        console.error('API Error:', error.response.status, error.response.data);
+      }
     } else if (error.request) {
       console.error('Network Error:', error.message);
     }

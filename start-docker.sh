@@ -35,7 +35,7 @@ else
 fi
 
 echo ""
-echo "✅ LunchRush is running with Docker!"
+echo "✅ LunchRush is running in background!"
 echo ""
 echo "📍 Frontend: http://localhost:8000"
 echo "📍 Backend API: http://localhost:8080"
@@ -44,10 +44,6 @@ echo ""
 echo "📋 Useful commands:"
 echo "   docker-compose logs -f           → Follow logs"
 echo "   docker-compose logs lunchservice → Backend logs"
+echo "   docker-compose ps                → Check status"
 echo "   docker-compose down              → Stop all services"
 echo ""
-echo "Press Ctrl+C to view logs (services will keep running)..."
-
-# Follow logs
-trap 'echo ""; echo "Services are still running. Use \"docker-compose down\" to stop them."; exit 0' INT
-docker-compose logs -f

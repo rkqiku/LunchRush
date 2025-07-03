@@ -7,14 +7,14 @@ import api from '../api/client';
 const ParticipantsList = ({ sessionId, currentUser, winningRestaurant }) => {
   const queryClient = useQueryClient();
   const { data: session } = useQuery({
-    queryKey: ['session', sessionId],
+    queryKey: ['session', 'today'],
     queryFn: () => api.getSession(sessionId),
   });
   
   const removeParticipantMutation = useMutation({
     mutationFn: (username) => api.removeParticipant(sessionId, username),
     onSuccess: () => {
-      queryClient.invalidateQueries(['session', sessionId]);
+      queryClient.invalidateQueries(['session', 'today']);
     },
   });
 

@@ -5,7 +5,11 @@ const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
       refetchInterval: 2000, // Poll every 2 seconds
-      retry: 1,
+      retry: (failureCount, error) => {
+        // Don't retry on 404 (no session found)
+        if (error?.response?.status === 404) return false;
+        return failureCount < 1;
+      },
     },
   },
 });

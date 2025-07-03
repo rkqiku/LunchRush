@@ -11,11 +11,16 @@ const JoinSession = ({ session, onToast }) => {
 
   const joinMutation = useMutation({
     mutationFn: (data) => api.joinSession(session.id, data.username),
-    onSuccess: () => {
-      queryClient.invalidateQueries(['session']);
+    onSuccess: async (data) => {
+      console.log('Join successful, response:', data);
       onToast('Successfully joined the session!', 'success');
+      // Force page refresh to sync all state from localStorage
+      setTimeout(() => {
+        window.location.reload();
+      }, 500);
     },
     onError: (error) => {
+      console.error('Join failed:', error);
       const message = error.response?.data?.error || 'Failed to join session';
       onToast(message, 'error');
     },
