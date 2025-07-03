@@ -1,4 +1,4 @@
-# 🍱 Huly Plugin Challenge: LunchRush
+# 🍱 Huly.io Plugin Challenge: LunchRush
 
 Welcome to the **LunchRush** challenge — your mission is to build a collaborative Huly plugin that helps employees coordinate their daily lunch orders in a fun and efficient way.
 
