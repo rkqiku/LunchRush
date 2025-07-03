@@ -1,6 +1,6 @@
 # 🍱 LunchRush - Collaborative Lunch Ordering System
 
-> **🧠 Important Note:** I am not a software engineer with experience in React or Go. This entire project was built with AI assistance in approximately 4 hours, demonstrating that with the right tools, anyone can create a working MVP in record time. The barriers to entry in software development are disappearing - this project is proof that determination and AI can bridge any knowledge gap.
+> **🧠 Important Note:** I am not a software engineer with experience in React or Go. This entire project was built with AI assistance in approximately 4.5 hours, demonstrating that with the right tools, anyone can create a working MVP in record time. The barriers to entry in software development are disappearing - this project is proof that determination and AI can bridge any knowledge gap.
 
 A real-time collaborative lunch ordering system with restaurant voting, meal tracking, and automatic session management. Built with modern microservices architecture using Go, React, Docker, and Dapr.
 
